@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 27% 97%;
+    --surface: 0 0% 100%;
+    --foreground: 36 11% 10%;
+    --muted: 38 6% 38%;
+    --border: 42 16% 86%;
+    --gold: 37 43% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    background-color: #FAF9F5;
+    color: #1A1815;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Tabular numerals for gold weights and financial figures */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8C8A8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9B783E;
+}
